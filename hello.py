@@ -8,25 +8,42 @@ from flask_wtf import Form
 
 from wtforms import StringField, SubmitField
 
-from wtforms.validators import Required
+from wtforms.validators import Required, ValidationError, DataRequired, StopValidation
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'password'
 
+
+
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 
-@app.route('/', methods = ['GET', 'POST'])
+def email_validate(form, field):
+    if '@' not in field.data:
+        raise StopValidation(f"Please include an '@' in the email address. \
+            '{field.data}' is missing an '@'.")
+
+class Name_Email(Form):
+    name = StringField('What is your name?', validators=[DataRequired()])
+    email = StringField('What is your UofT Email address?', validators=[DataRequired(), email_validate])
+    submit = SubmitField('Submit')
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    name = None
-    form = NameForm()
-    if form.validate_on_submit():
-        old_name = session.get('name')
-        if old_name is not None and old_name != form.name.data:
-            flash('Looks like you have changed your name!')
-        session['name'] = form.name.data
-        return redirect(url_for('index'))
-    return render_template('index.html', form=form, name=session.get('name'))
+	name = None
+	email = None
+	form = Name_Email()
+	if form.validate_on_submit():
+		old_name = session.get('name')
+		old_email = session.get('email')
+		if old_name is not None and old_name != form.name.data:
+			flash('Looks like you have changed your name!')
+		if old_email is not None and old_email != form.email.data:
+			flash('Looks like you have changed your email!')
+		session['name'] = form.name.data
+		session['email'] = form.email.data
+		return redirect(url_for('index'))
+	return render_template('index.html', form=form, name=session.get('name'), email=session.get('email'))
 
 @app.route('/user/<name>')
 def user(name):
@@ -39,11 +56,6 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template('500.html'), 500
-
-class NameForm(Form):
-    name = StringField('What is your name?', validators=[Required()])
-    submit = SubmitField('Submit')
-
 
 if __name__ == '__main__':
     app.run(debug=True)
