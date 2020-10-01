@@ -6,16 +6,16 @@
 ![Activity 1](https://github.com/honeyjoo/ECE444-F2020-Lab3/blob/master/activity1.png?raw=true)
 
 ## Activity 2
-# First page with name and email
+#### First page with name and email
 ![First Page with Name and Email](https://github.com/honeyjoo/ECE444-F2020-Lab3/blob/master/activity2_1.png?raw=true)
 
-# Valid first name and email
+#### Valid first name and email
 ![Valid First Name and Email](https://github.com/honeyjoo/ECE444-F2020-Lab3/blob/master/activity2_2.png?raw=true)
 
-# Invalid email without @ sign
+#### Invalid email without @ sign
 ![Invalid Email](https://github.com/honeyjoo/ECE444-F2020-Lab3/blob/master/activity2_3.png?raw=true)
 
-# Non-UofT email
+#### Non-UofT email
 ![Non-UofT Email](https://github.com/honeyjoo/ECE444-F2020-Lab3/blob/master/activity2_4.png?raw=true)
 
 ## Activity 3
