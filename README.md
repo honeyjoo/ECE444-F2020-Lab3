@@ -3,17 +3,23 @@
 Activity 1 and 2 codes can be found lab4_Microservice_Experiment branch.
 
 # Deliverable 2
-Firstly, install docker from https://docs.docker.com/get-started/ or with brew install docker.
+Firstly, install docker from https://docs.docker.com/get-started/ or with 
+$ brew install docker.
 Next, clone the git repository using git clone command. After creating a new branch, check out the experimentation branch.
 
 You should write a docker-compose.yml that specifies image name, port, and other settings, if you want to use docker-compose commands. Write a Dockerfile as well. 
 
 The dockerfile is located in the root of this repo, ECE444-F2020-Lab3/Dockerfile.
 
-One can create a docker container by using docker-compose up. Alternatively, you can use docker build -t xyz. This will build the container and flag the image xyz.
+One can create a docker container by using:
+$ `docker-compose up`
+
+Alternatively, you can use 
+$ `docker build -t xyz` 
+This will build the container and flag the image xyz.
 
 Here, I used docker-compose to run the project. The command was docker-compose up.
-This command will attach the container and show that it is running in terminal. Note that if you want to exit, you can just click ctrl+C. One thing to remember is, even though you exited, it does not mean that containers are deleted when we do doctor-compose up.To stop running containers when we exit, run docker-compose up -d. Also, remove containers, run docker-compose down.
+This command will attach the container and show that it is running in terminal. Note that if you want to exit, you can just click ctrl+C. One thing to remember is, even though you exited, it does not mean that containers are deleted when we do doctor-compose up.To stop running containers when we exit, run `docker-compose up -d`. Also, remove containers, run `docker-compose down`.
 
 If docker successfully started a container and the website is hosted, you should get a popup in terminal and in docker desktop that look like below:
 #### Docker-compose up
