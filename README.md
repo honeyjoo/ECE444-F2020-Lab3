@@ -11,10 +11,15 @@ You should write a docker-compose.yml that specifies image name, port, and other
 The dockerfile is located in the root of this repo, ECE444-F2020-Lab3/Dockerfile.
 
 One can create a docker container by using docker-compose up. Alternatively, you can use docker build -t xyz. This will build the container and flag the image xyz.
+
+Here, I used docker-compose to run the project. The command was docker-compose up.
+This command will attach the container and show that it is running in terminal. Note that if you want to exit, you can just click ctrl+C. One thing to remember is, even though you exited, it does not mean that containers are deleted when we do doctor-compose up.To stop running containers when we exit, run docker-compose up -d. Also, remove containers, run docker-compose down.
+
 If docker successfully started a container and the website is hosted, you should get a popup in terminal and in docker desktop that look like below:
 #### Docker-compose up
 ![docker run command](https://github.com/honeyjoo/ECE444-F2020-Lab3/blob/lab4_Microservice_Experiment/Image1.png?raw=true)
 
+Since the application is now executed, it will be accessible on your browser in localhost.
 Browser would look like this:
 
 #### browser that is equivalent to lab 3 activity 2
