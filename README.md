@@ -22,21 +22,21 @@ Here, I used docker-compose to run the project. The command was docker-compose u
 This command will attach the container and show that it is running in terminal. Note that if you want to exit, you can just click ctrl+C. One thing to remember is, even though you exited, it does not mean that containers are deleted when we do doctor-compose up.To stop running containers when we exit, run `docker-compose up -d`. Also, remove containers, run `docker-compose down`.
 
 If docker successfully started a container and the website is hosted, you should get a popup in terminal and in docker desktop that look like below:
-#### Docker-compose up
+#### 1. Popup in terminal after docker-compose up command
 ![docker run command](https://github.com/honeyjoo/ECE444-F2020-Lab3/blob/lab4_Microservice_Experiment/Image1.png?raw=true)
 
 Since the application is now executed, it will be accessible on your browser in localhost.
 Browser would look like this:
 
-#### browser that is equivalent to lab 3 activity 2
+#### 2. browser that is equivalent to lab 3 activity 2
 ![browser](https://github.com/honeyjoo/ECE444-F2020-Lab3/blob/lab4_Microservice_Experiment/Image2.png?raw=true)
 
 This image shows the project is being run with docker compose.
-#### docker browser confirming that the container is created and is running.
+#### 3. docker browser confirming that the container is created and is running.
 ![docker run in docker desktop](https://github.com/honeyjoo/ECE444-F2020-Lab3/blob/lab4_Microservice_Experiment/Image3.png?raw=true)
 
-This screenshot shows a list of docker images. The image for our lab is ece444-f2020-lab3_web.
-#### docker image ls displays a list of docker images
+This screenshot shows a list of docker images. The image for our lab is ece444-f2020-lab3_web. One can run `docker image ls` to see the list of images.
+#### 4. docker image ls displays a list of docker images
 ![list of docker images](https://github.com/honeyjoo/ECE444-F2020-Lab3/blob/lab4_Microservice_Experiment/Image4.png?raw=true)
 
 # Deliverable 3
