@@ -18,8 +18,8 @@ Alternatively, you can use
 $ `docker build -t xyz` 
 This will build the container and flag the image xyz.
 
-Here, I used docker-compose to run the project. The command was docker-compose up.
-This command will attach the container and show that it is running in terminal. Note that if you want to exit, you can just click ctrl+C. One thing to remember is, even though you exited, it does not mean that containers are deleted when we do doctor-compose up.To stop running containers when we exit, run `docker-compose up -d`. Also, remove containers, run `docker-compose down`.
+Here, I used `docker-compose up` to run the project. 
+This command attaches the container and shows that it is running in terminal. Note that if you want to exit, you can just click ctrl+C. One thing to remember is, even though you exited, it does not mean that containers are deleted when we do doctor-compose up.To stop running containers when we exit, run `docker-compose up -d`. Also, remove containers, run `docker-compose down`.
 
 If docker successfully started a container and the website is hosted, you should get a popup in terminal and in docker desktop that look like below:
 #### 1. Popup in terminal after docker-compose up command
